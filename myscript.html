@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.pi{
+    font-size: 50px;
+}
+.r{
+    font-size: 50px;
+}
+.total{
+    font-size: 100px;
+}
+    </style>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cumque velit earum ad voluptatem perferendis
+        facere ut impedit iste amet, neque sed quod error? Animi ut dolore numquam perferendis ea cum voluptatum. Esse,
+        recusandae vel. Ipsum rem nulla, veritatis dolorum at itaque velit dignissimos quibusdam nam delectus voluptatem
+        tenetur et libero? Ut repellat voluptatem ratione earum, obcaecati, neque provident voluptatum praesentium sed
+        ipsum ad asperiores eveniet animi aliquid iste harum excepturi nulla odit deserunt cumque dolores! Nulla illum
+        animi unde pariatur. Nihil atque ullam deleniti nesciunt, cupiditate soluta maiores reiciendis impedit pariat
+    </P>
+
+    <div id="pi" class="pi">
+        3.142
+    </div>
+    <div id="r" class="r">
+        7
+    </div>
+    <div class="total" id="total"></div>
+    <script>
+        let pi = document.getElementById("pi").innerText;
+        let r = document.getElementById("r").innerText;
+        let area = Number(pi) * Number(r) * Number(r);
+        console.log(area)
+        document.getElementById("total").innerText = area;
+    </script>
+</body>
+
+</html>

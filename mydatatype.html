@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // strings in js
+        let fname = 'John';
+        let lname = " Ng'ang'a";
+        let fullname = `${fname} ${lname}`;
+        console.log(fullname);
+        nickname = "lester";
+        // The ${...} syntax allows you to embed variables directly within the string. 
+        // Accessing string methods/operations
+        console.log(fullname.charAt(1));
+        console.log(fullname.toUpperCase());
+        console.log(fullname.toLowerCase());
+        console.log(fullname.length);
+        console.log(fullname.concat(nickname));
+        console.log(fullname.substring(0,3));
+        console.log(fullname.substring(7,-1));
+        console.log(fullname.substring(5));
+        console.log(fullname.indexOf('a'))
+        console.log(fullname.lastIndexOf('a'))
+        console.log(fullname.toLowerCase().replace("John", "Letina"))
+        
+        console.log(fullname.italics())
+        console.log(fullname.endsWith("a")) // output = true'
+        console.log(fullname.endsWith("s")) // output = false'
+        console.log(fullname.includes("n"))
+        console.log(fullname.slice(-4))
+        let fullnam = "  sandaiya letina  "
+        console.log(fullnam.trim())
+        console.log(fullname.split(","))
+
+    </script>
+    
+</body>
+</html>

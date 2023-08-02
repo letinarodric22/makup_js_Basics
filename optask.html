@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Console log a boolean that checks if a number is between 0 and 100
+        let num = 1;
+        console.log(num > 0 && num <= 100);
+
+        function isValidEmail(email) {
+  if (email.indexOf('@') === -1) {
+    return false;
+  }
+  const domain = email.split('@')[1];
+  if (domain.indexOf('.') === -1) {
+    return false;
+  }
+  return true;
+}
+console.log(isValidEmail("john@example.com"));      
+console.log(isValidEmail("jane.doe@gmail.com"));   
+console.log(isValidEmail("invalid.email"));        
+console.log(isValidEmail("name@invalid"));         
+console.log(isValidEmail("user@domain")); 
+console.log(isValidEmail("user@domain")); 
+
+
+function isValidKenyanPhoneNumber(phoneNumber) {
+  // Remove leading '+' sign, if present
+  if (phoneNumber.startsWith('+')) {
+    phoneNumber = phoneNumber.slice(1);
+  }
+
+  // Check if the phone number starts with '254' or '0'
+  if (!phoneNumber.startsWith('254') && !phoneNumber.startsWith('0')) {
+    return false;
+  }
+
+  // Remove the country code ('254' or '0')
+  phoneNumber = phoneNumber.slice(3);
+
+  // Check the length of the remaining phone number
+  if (phoneNumber.length !== 9) {
+    return false;
+  }
+
+  // Check if the remaining phone number starts with a valid area code or '1'
+  const areaCodes = ['20', '30', '40', '50', '60', '11', '12', '13', '14', '15', '16', '17', '18', '19', '9'];
+  const areaCode = phoneNumber.slice(0, 2);
+  if (!areaCodes.includes(areaCode)) {
+    return false;
+  }
+
+  // The phone number is valid
+  return true;
+}
+
+// Test cases
+console.log(isValidKenyanPhoneNumber("+254712345678")); // Output: true
+console.log(isValidKenyanPhoneNumber("254712345678"));  // Output: true
+console.log(isValidKenyanPhoneNumber("0712345678"));    // Output: true
+console.log(isValidKenyanPhoneNumber("712345678"));     // Output: true
+console.log(isValidKenyanPhoneNumber("0112345678"));    // Output: true
+console.log(isValidKenyanPhoneNumber("112345678"));     // Output: true
+
+console.log(isValidKenyanPhoneNumber("072345678"));     // Output: false (7th digit not in [01245678])
+console.log(isValidKenyanPhoneNumber("25471234567"));   // Output: false (not enough digits)
+console.log(isValidKenyanPhoneNumber("2547123456789")); // Output: false (too many digits)
+console.log(isValidKenyanPhoneNumber("254112345678"));  // Output: false (invalid area code)
+
+
+
+    </script>
+</body>
+</html>

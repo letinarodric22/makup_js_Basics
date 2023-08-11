@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>task2</h1>
+    <script>
+        function checkNumber(num){
+            if (num % 2 === 0) {
+                console.log("even number");
+                if (num % 4 === 0) {
+                    console.log("Divisible by 4");
+        }
+    } else {
+        console.log("odd");
+    }
+        }
+         // Prompt for user input
+         const userInput = prompt("Enter a number: ");
+        const number = parseInt(userInput);
+
+        // Call the function
+        checkNumber(number);
+    </script>
+</body>
+</html>

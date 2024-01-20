@@ -1,3 +1,10 @@
 {
     "liveServer.settings.port": 5501
 }
+
+
+// ui - how the data are presented.
+// database- how the data is managed.
+// logic- how data is being processed.
+// hosting- where data is stored.
+// api- how data is fetched.
